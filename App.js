@@ -39,11 +39,7 @@ export default function App() {
 
 
   
-//.catch((err)=>{setIsError(true); setData([]); console.error(err);})
-//getWeather2(location.coords.latitude, location.coords.longitude)
 
- 
-  //console.log(data.daily[0].weather[0].main)
  
   const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   var z = 0
@@ -55,7 +51,6 @@ export default function App() {
     return(day)
   }
  
-//.0.main "description":JSON.stringify(data.daily) {addDays()}
 
 function Tempconvet(input){
   let output = input - 273.15;
@@ -70,7 +65,6 @@ function errorCheck(input){
   }
 }
 
-//{Tempconvet(data.daliy.temp.day)} °C
   return (
     <View style={styles.container}>
       
@@ -88,7 +82,7 @@ function errorCheck(input){
         source={
           {uri:`http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@2x.png`}} />
         </>
-        //key={index}
+
       }      
       {
         data.daily == null || location == null ?<Text style = {{color: 'white'}}>DATA NOT THERE</Text>:
@@ -123,25 +117,23 @@ const styles = StyleSheet.create({
   },  tinyLogo: {
     width: 50,
     height: 50,
-    // flex:1,
-    // alignItems:'left'
+
   },  item:{
     width: '60%',
     backgroundColor: '#222',
     color: "white",
-    //textAlign :"center",
+
     borderColor: "black",
-    //borderWidth: 1,
+
     borderRadius: 10,
     textTransform:'capitalize',
-    //padding: 10,
+
     marginVertical: 5,
 
   },
   test:{
     backgroundColor: '#222',
-    //textDecorationColor :'green',
-    //textAlign : 'right',
+
     flexDirection: 'row',
     borderRadius: 10,
     marginVertical: 2,
